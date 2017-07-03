@@ -1,0 +1,22 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Jarvis17",
+		"_postman_id": "d940c7ee-6734-001a-8942-bc8a3f1cba23",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ExampleQuestions",
+			"request": {
+				"url": "http://private-425992-pizza8.apiary-mock.com/questions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
