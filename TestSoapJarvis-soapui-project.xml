@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="35469a74-2d0c-4c26-907d-cc8e91c2f6db" activeEnvironment="Default" name="TestSoapJarvis" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f927f52b-bda3-4ba1-bc4d-248db060903c" wsaVersion="NONE" name="PizzaMenuBinding" type="wsdl" bindingName="{http://demo4778160.mockable.io/service/1}PizzaMenuBinding" soapVersion="1_1" anonymous="optional" definition="http://demo4778160.mockable.io/PizzaMenu?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://demo4778160.mockable.io/PizzaMenu?wsdl"><con:part><con:url>http://demo4778160.mockable.io/PizzaMenu?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://demo4778160.mockable.io/service/1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mio="http://demo4778160.mockable.io/service/1">
+  <wsdl:documentation>mockable.io generated WSDL</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://demo4778160.mockable.io/service/1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="getMenuRequest" type="xsd:anyType"/>
+      <xsd:element name="getMenuResponse" type="xsd:anyType"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getMenuInputMessage">
+    <wsdl:part name="getMenuInputPart" element="mio:getMenuRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getMenuOutputMessage">
+    <wsdl:part name="getMenuOutputPart" element="mio:getMenuResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="PizzaMenuPortType">
+    <wsdl:operation name="getMenu">
+      <wsdl:input name="getMenuInput" message="mio:getMenuInputMessage"/>
+      <wsdl:output name="getMenuOutput" message="mio:getMenuOutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PizzaMenuBinding" type="mio:PizzaMenuPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getMenu">
+      <soap:operation soapAction="getMenu"/>
+      <wsdl:input name="getMenuInput">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMenuOutput">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PizzaMenuService">
+    <wsdl:port name="PizzaMenuPort" binding="mio:PizzaMenuBinding">
+      <soap:address location="http://demo4778160.mockable.io/PizzaMenu"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://demo4778160.mockable.io/PizzaMenu</con:endpoint></con:endpoints><con:operation id="7e016b82-0875-41e8-b32d-1b9bf4e3191f" isOneWay="false" action="getMenu" name="getMenu" bindingOperationName="getMenu" type="Request-Response" outputName="getMenuOutput" inputName="getMenuInput" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3aa7e3fe-8b64-4d0a-b1e3-85da0c748cae" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://demo4778160.mockable.io/PizzaMenu</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://demo4778160.mockable.io/service/1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:getMenuRequest>?</ns:getMenuRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="getMenu"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
