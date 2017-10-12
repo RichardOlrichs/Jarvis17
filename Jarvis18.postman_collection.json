@@ -1,0 +1,133 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Jarvis18",
+		"_postman_id": "d940c7ee-6734-001a-8942-bc8a3f1cba23",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "startPizzaPrepProcess",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "richard@olrichs.nl",
+						"password": "ZAQ12wsx",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://pcs-jarvis18.process.us2.oraclecloud.com/bpm/api/4.0/processes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic cmljaGFyZEBvbHJpY2hzLm5sOlpBUTEyd3N4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"processDefId\":\"default~Pizza_Preparation_12c_Import!1~PizzaIPreparationProcess\",\n\t\"serviceName\":\"PizzaIPreparationProcess\",\n\t\"operation\":\"start\",\n\t\"action\":\"Submit\",\n    \"params\": { \"payloadIn\": \n                {  \n\t\t\t\t \"Name\" : \"OneCheese\", \n\t\t\t\t \"Size\" : \"small\",\t\t\t\t \n                \t\"Ingredients\":  \n                \t{\n\t\t\t\t\t\"Ingredient\" : [{\n                                \t\"Name\" : \"oil\", \n                                \t\"Quantity\" : 1, \n                                \t\"Unit\" : \"tbsp\" \n                                   },\n                                   {\n                                \t\"Name\" : \"qqq\", \n                                \t\"Quantity\" : 1, \n                                \t\"Unit\" : \"tbsp\" \n                                   }]\n                    }\n                }\n              }\n}"
+				},
+				"description": "Starting the Pizza Preparation Process."
+			},
+			"response": []
+		},
+		{
+			"name": "getProcessDef",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "richard@olrichs.nl",
+						"password": "ZAQ12wsx",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://pcs-jarvis18.process.us2.oraclecloud.com/bpm/api/4.0/process-definitions",
+				"method": "GET",
+				"header": [
+					{
+						"key": "pcs_mode",
+						"value": "dev",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic cmljaGFyZEBvbHJpY2hzLm5sOlpBUTEyd3N4",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getFavPizzas",
+			"request": {
+				"url": "http://demo4778160.mockable.io/favpizzas",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getPizza1",
+			"request": {
+				"url": "http://demo4778160.mockable.io/favpizzas/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "start Jarvis 1.0",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "richard@olrichs.nl",
+						"password": "ZAQ12wsx",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://pcs-jarvis18.process.us2.oraclecloud.com/bpm/api/4.0/processes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic cmljaGFyZEBvbHJpY2hzLm5sOlpBUTEyd3N4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n\t\"processDefId\":\"default~Jarvis_Pizzeria!1~Jarvis10\",\n\t\"serviceName\":\"Jarvis10.service\",\n\t\"operation\":\"start\",\n\t\"action\":\"Submit\",\n    \"params\": { \"orderId\": \"999\"}\n}"
+				},
+				"description": "Starting the Pizza Preparation Process."
+			},
+			"response": []
+		}
+	]
+}
